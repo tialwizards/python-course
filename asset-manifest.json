@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/python-course/static/css/main.2ca42702.css",
+    "main.js": "/python-course/static/js/main.92cefb42.js",
+    "static/media/python-elif.png": "/python-course/static/media/python-elif.7c5986ae2273ff074adb.png",
+    "static/media/python-if-else.png": "/python-course/static/media/python-if-else.0605354808e2e4586cb9.png",
+    "static/media/python-if.png": "/python-course/static/media/python-if.9d9008f2a785a25531a3.png",
+    "static/media/python-while-loop.png": "/python-course/static/media/python-while-loop.f6ebdf7e5ad879311b1e.png",
+    "static/media/python-nested-if.png": "/python-course/static/media/python-nested-if.0d92009fc15ef67aa426.png",
+    "static/media/break-statement-python.png": "/python-course/static/media/break-statement-python.f00d5ae09ad336a713bd.png",
+    "static/media/continue-statement-python.png": "/python-course/static/media/continue-statement-python.50ac81a6fcef0764f931.png",
+    "static/media/call-function-python.png": "/python-course/static/media/call-function-python.8aa4e378baa98afd0b71.png",
+    "static/media/create-function-python.png": "/python-course/static/media/create-function-python.340fea901d9074023e65.png",
+    "static/media/function-return-value-python.png": "/python-course/static/media/function-return-value-python.de9b9d487c12affdf0de.png",
+    "index.html": "/python-course/index.html",
+    "main.2ca42702.css.map": "/python-course/static/css/main.2ca42702.css.map",
+    "main.92cefb42.js.map": "/python-course/static/js/main.92cefb42.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2ca42702.css",
+    "static/js/main.92cefb42.js"
+  ]
+}
