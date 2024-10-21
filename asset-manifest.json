@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/python-course/static/css/main.2ca42702.css",
-    "main.js": "/python-course/static/js/main.c10d99b7.js",
+    "main.css": "/python-course/static/css/main.31e24804.css",
+    "main.js": "/python-course/static/js/main.9eeb2a1b.js",
     "static/media/python-elif.png": "/python-course/static/media/python-elif.7c5986ae2273ff074adb.png",
     "static/media/python-if-else.png": "/python-course/static/media/python-if-else.0605354808e2e4586cb9.png",
     "static/media/python-if.png": "/python-course/static/media/python-if.9d9008f2a785a25531a3.png",
@@ -13,11 +13,11 @@
     "static/media/create-function-python.png": "/python-course/static/media/create-function-python.340fea901d9074023e65.png",
     "static/media/function-return-value-python.png": "/python-course/static/media/function-return-value-python.de9b9d487c12affdf0de.png",
     "index.html": "/python-course/index.html",
-    "main.2ca42702.css.map": "/python-course/static/css/main.2ca42702.css.map",
-    "main.c10d99b7.js.map": "/python-course/static/js/main.c10d99b7.js.map"
+    "main.31e24804.css.map": "/python-course/static/css/main.31e24804.css.map",
+    "main.9eeb2a1b.js.map": "/python-course/static/js/main.9eeb2a1b.js.map"
   },
   "entrypoints": [
-    "static/css/main.2ca42702.css",
-    "static/js/main.c10d99b7.js"
+    "static/css/main.31e24804.css",
+    "static/js/main.9eeb2a1b.js"
   ]
 }
