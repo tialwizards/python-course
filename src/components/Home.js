@@ -21,7 +21,7 @@ const Home = () => {
         <div className="container text-center my-5">
             <h2 className="mb-4">Get Started Today!</h2>
             <p>Join thousands of learners who are mastering Python with TIAL WIZARDS.</p>
-            <a href="/courses/python-overview#overview" className="btn btn-primary btn-lg">Start Now</a>
+            <Link to="/courses/python-overview#overview" className="btn btn-primary btn-lg">Start Now</Link>
         </div>
         </>
     
