@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+// import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { HashRouter  as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Accordion from './components/Accordion';
 import Content from './data/Introduction';
 import Navbar from './components/Navbar';
