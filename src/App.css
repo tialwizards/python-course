@@ -1,0 +1,216 @@
+/* General body styling */
+body {
+    padding-top: 60px; /* Account for navbar height */
+    margin: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    background-color: #fff; /* Light background behind content */
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 300px; /* Fixed width */
+    position: absolute; /* Stick to the left */
+    top: 60px; /* Adjust based on navbar height */
+    left: 0;
+    height: 100vh; /* Full height */
+    background-color: #f8f9fa; /* Light background */
+    padding: 20px;
+    overflow-y: auto; /* Enable scrolling if content overflows */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Add a shadow for visual separation */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Content section styling */
+.content {
+    margin-left: 250px; /* Account for sidebar width */
+    padding: 20px;
+    position: relative; /* Ensure it's positioned correctly */
+    min-height: 100vh; /* Ensure it takes full height even with less content */
+    background-color: #ffffff;
+}
+
+/* Navbar adjustments */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1050; /* Above sidebar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a shadow */
+}
+
+/* Prevent accordion or content from affecting sidebar width */
+.accordion, .content-area {
+    max-width: 100%; /* Ensure content takes full width */
+}
+
+/* Ensure sidebar does not overlap with the content */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* For smaller screens, let the sidebar take full width */
+        position: relative; /* Make it scroll with content */
+        top: 0;
+        height: auto;
+    }
+    .content {
+        margin-left: 0; /* Remove left margin on smaller screens */
+    }
+}
+
+/* Pre Code */
+pre {
+    background-color: #212529; /* Light gray background */
+    border: 1px solid #dee2e6; /* Light border for better separation */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Padding around the code */
+    overflow: auto; /* Horizontal scroll for long lines */
+    font-family: 'Courier New', Courier, monospace; /* Monospace font */
+    font-size: 14px; /* Font size */
+    color: #343a40; /* Text color */
+    white-space: pre-wrap;
+}
+
+pre code {
+    color: #fff; /* Text color */
+    display: inline;
+    white-space: pre-wrap;
+}
+
+@media (max-width: 768px) {
+    pre {
+        font-size: 0.875rem; /* Smaller font size on mobile devices */
+    }
+} 
+
+
+/* Scroll Bar Styling */
+/* Scrollbar */
+@media screen and (min-width:768px){::-webkit-scrollbar{-webkit-appearance:none;width:4px;height:5px}::-webkit-scrollbar-track{background-color:transparent}::-webkit-scrollbar-thumb{background-color: rgba(0,0,0,.15);border-radius:10px}::-webkit-scrollbar-thumb:hover{background-color:rgba(0,0,0,.45)}::-webkit-scrollbar-thumb:active{background-color:rgba(0,0,0,.45)}}
+/* Scrollbar Custom */
+.itemPopulars.itemSlide, .sliderViewport, article .scrollImage{scrollbar-color: transparent transparent;scrollbar-width: 0px;}
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light Gray for even rows */
+}
+
+tr:hover {
+    background-color: #ddd; /* Darker Gray on hover */
+}
+
+td {
+    vertical-align: middle; /* Center vertically */
+}
+
+caption {
+    font-size: 1.5em;
+    margin: 10px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    table {
+        font-size: 0.9em; /* Slightly smaller text on mobile */
+    }
+}
+
+/* Image */
+img {
+    width: 100%; /* Set the width to 100% */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Optional: Add spacing between images */
+}
+
+/* Home Page */
+.hero {
+    background: url('https://cdn.stocksnap.io/img-thumbs/960w/laptop-apple_UQ9AB8NRV9.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 100px 0;
+}
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+.hero p {
+    font-size: 1.5rem;
+}
+.social-icons a {
+    margin: 0 15px;
+    color: #ffff00;
+    font-size: 1.5rem;
+}
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: #130f49; /* Dark background */
+    color: #ffffff; /* White text */
+    
+}
+
+footer h5 {
+    margin-top: 0;
+    color: rgba(255, 255, 255, 0.7); /* Lighter text for headers */
+}
+
+footer ul {
+    padding: 0; /* Reset padding */
+}
+
+footer ul li {
+    color: #999999; /* Grey color for list items */
+}
+
+footer ul li:hover {
+    color: #ffffff; /* Change color on hover */
+    transition: color 0.2s; /* Smooth transition */
+}
+
+/* Ensure the footer stays at the bottom */
+html, body {
+    height: 100%; /* Make sure body takes full height */
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full height for root */
+}
+
+footer {
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+/* Responsive Styles */
+@media (max-width: 576px) {
+    footer h5 {
+        font-size: 1.2rem; /* Adjust heading size for small screens */
+    }
+    
+    footer ul li {
+        font-size: 0.9rem; /* Adjust list item size for small screens */
+    }
+}
+
