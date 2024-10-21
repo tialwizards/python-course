@@ -17,8 +17,8 @@ const Introduction = () => {
 
     const content = {
         "python-overview": (
-            <div id="overview"> 
-                <h2>Python Overview</h2>
+            <div> 
+                <h2 id="overview">Python Overview</h2>
                 <p>
                     <strong>What is Python?</strong> Python is a dynamically typed, general-purpose programming language that supports both object-oriented and functional programming approaches. It is also an interpreted and high-level programming language created by Guido Van Rossum in 1989.
                 </p>

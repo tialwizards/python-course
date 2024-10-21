@@ -10,7 +10,7 @@ body {
 .sidebar {
     width: 300px; /* Fixed width */
     position: absolute; /* Stick to the left */
-    top: 60px; /* Adjust based on navbar height */
+    top: 64px; /* Adjust based on navbar height */
     left: 0;
     height: 100vh; /* Full height */
     background-color: #f8f9fa; /* Light background */
