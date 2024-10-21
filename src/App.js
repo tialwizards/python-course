@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Accordion from './components/Accordion';
 import Content from './data/Introduction';
 import Navbar from './components/Navbar';
@@ -34,7 +34,9 @@ const App = () => {
                     </div>
                     <div className="content">
                         <Routes>
-                            <Route path="/" element={<Home/>} />
+                            {/* Redirect from '/' to '/python-course' */}
+                            <Route path="/" element={<Navigate to="/python-course" />} />
+                            <Route path="/python-course" element={<Home/>} />
                             <Route path="/courses/:topic" element={<Content />} />
                             {/* 404 Route */}
                             <Route path="*" element={<NotFound />} />
