@@ -26,7 +26,7 @@ const Home = () => {
                 <div className="card mb-4">
                     <div className="card-body">
                         <h5 className="card-title">Easy to Learn</h5>
-                        <p className="card-text">Python's simple syntax makes it perfect for all the beginners</p>
+                        <p className="card-text">Python is easy to learn for the beginners to focus on programming concepts</p>
                     </div>
                 </div>
             </div>

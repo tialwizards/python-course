@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link, Navigate } from 'react-router-dom';
 import pythonIfStatement from '../images/python-if.png';
 import pythonIfElseStatement from '../images/python-if-else.png';
 import pythonElifStatement from '../images/python-elif.png';
@@ -5431,13 +5431,54 @@ Phone is 9876543210`}</code></pre>
         // Add more topics here...
     };
 
+
+
+    // Create an array of topic keys for navigation
+    const topicKeys = Object.keys(content);
+    const currentIndex = topicKeys.indexOf(topic.toLowerCase());
+
+    if (currentIndex === -1) return <Navigate to="/not-found" />; // Handle invalid topic
+
+    // const currentContent = content[topic.toLowerCase()];
+
+    // Function to scroll to top
+    const scrollToTop = () => {
+        window.scrollTo(0, 0);
+    };
+
+
+    const handlePrev = () => {
+        return currentIndex > 0 ? topicKeys[currentIndex - 1] : null;
+    };
+
+    const handleNext = () => {
+        return currentIndex < topicKeys.length - 1 ? topicKeys[currentIndex + 1] : null;
+    };
+
     // Convert topic to lower case and replace spaces with hyphens for URL compatibility
     const topicKey = topic.toLowerCase();
 
+
     return (
+
+        <>
+        
         <div>
             {content[topicKey] ? content[topicKey] : <div><h2>Content not found</h2></div>}
         </div>
+
+        <br/><br/>
+        <div className="navigation-buttons">
+                {handlePrev() && (
+                    <Link to={`/courses/${handlePrev()}`} className="btn btn-primary" onClick={scrollToTop} title='Previous'>&lt;&lt; Previous</Link>
+                )}
+                {handleNext() && (
+                    <Link to={`/courses/${handleNext()}`} className="btn btn-primary" onClick={scrollToTop} title='Next'>Next &gt;&gt;</Link>
+                )}
+            </div>
+        
+            </>
+        
     );
 };
 

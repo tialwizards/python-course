@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const Accordion = () => {
+const Accordion = ({ onTopicClick, selectedTopic }) => {
     const topics = [
         {
             title: "INTRODUCTION",
@@ -150,20 +150,30 @@ const Accordion = () => {
             {topics.map((topic, index) => (
                 <div className="accordion-item" key={index}>
                     <h2 className="accordion-header" id={`heading${index}`}>
-                        <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target={`#collapse${index}`} aria-expanded="true" aria-controls={`collapse${index}`}>
+                        <button 
+                            className="accordion-button" 
+                            type="button" 
+                            data-bs-toggle="collapse" 
+                            data-bs-target={`#collapse${index}`} 
+                            aria-expanded="true" 
+                            aria-controls={`collapse${index}`}>
                             {topic.title}
                         </button>
                     </h2>
                     <div id={`collapse${index}`} className="accordion-collapse collapse" aria-labelledby={`heading${index}`} data-bs-parent="#accordionExample">
                         <div className="accordion-body">
-                            {topic.subTopics.map((subTopic, subIndex) => (
-                                <Link 
-                                    to={`/courses/${subTopic.replace(/\s+/g, '-').toLowerCase()}`} 
-                                    key={subIndex} 
-                                    className="d-block text-decoration-none">
-                                    {subTopic}
-                                </Link>
-                            ))}
+                            {topic.subTopics.map((subTopic, subIndex) => {
+                                const isActive = selectedTopic === subTopic.toLowerCase().replace(/\s+/g, '-');
+                                return (
+                                    <Link 
+                                        to={`/courses/${subTopic.replace(/\s+/g, '-').toLowerCase()}`} 
+                                        key={subIndex} 
+                                        className={`d-block text-decoration-none ${isActive ? 'active' : ''}`}
+                                        onClick={() => onTopicClick(subTopic)}>
+                                        {subTopic}
+                                    </Link>
+                                );
+                            })}
                         </div>
                     </div>
                 </div>
